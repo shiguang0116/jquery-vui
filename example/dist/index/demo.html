@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="keywords" content="jquery，webpack，less，component">
+	<meta name="description" content="一个基于webpack工具搭建的jQuery模块化项目">
+	<!--[if lte IE 8]>
+		<script src="/assets/js/html5shiv.min.js"></script>
+		<script src="/assets/js/respond.min.js"></script>
+	<![endif]-->
+	<title>
+组件用例 - 及时油
+</title>
+<link rel="shortcut icon" href="/favicon.ico"><link href="/styles/app.css?24930c8208525302c7d3" rel="stylesheet"><link href="/styles/demo.css?24930c8208525302c7d3" rel="stylesheet"></head>
+
+<body>
+	<header class="header">
+		<div class="wrapper">
+			<div class="row">
+				<div class="col-sm-12">
+					<a href="">
+						<!-- <img src="" alt=""> -->
+						JQuery vui
+					</a>
+				</div>
+				<div class="col-sm-12">
+					<nav>
+						<ul>
+							<li>
+								<a href="">指南</a>
+							</li>
+							<li>
+								<a href="">组件</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+<section>
+    <div class="w">
+        <!-- form组件 -->
+        <!-- <h2>button</h2>
+<button class="btn">btn</button>
+<button class="btn btn-hu">btn-hu</button>
+<button class="btn btn-jv">btn-jv</button>
+<button class="btn btn-bd">btn-bd</button>
+<button class="btn btn-hu-bd">btn-hu-bd</button>
+<button class="btn btn-jv-bd">btn-jv-bd</button> -->
+        <!-- <div id="app">
+	<h2>input</h2>
+	<div style="width: 300px;">
+		<input type="text" autocomplete="off" class="sg-input" placeholder="请输入">
+	</div>
+</div> -->
+        <!-- <div id="app">
+	<h2>radio</h2>
+	<div class="sg-radio" id="radio1">
+		<label class="sg-radio-item sg-radio-checked" data-value="red">
+			<span class="sg-radio-inp"></span>红色
+        </label>
+	    <label class="sg-radio-item" data-value="blue">
+    		<span class="sg-radio-inp"></span>蓝色
+        </label>
+        <label class="sg-radio-item" data-value="purple">
+    		<span class="sg-radio-inp"></span>紫色
+        </label>
+		<button class="btn btn-jv" id="submit">提交</button>
+	</div>
+</div> -->
+        <!-- <h2>checkbox</h2>
+<div class="sg-checkbox" id="checkbox1">
+	<label class="sg-checkbox-item sg-checkbox-checked" data-value="banner">
+		<span class="sg-checkbox-inp"></span>
+		<span>香蕉</span>
+	</label>
+	<label class="sg-checkbox-item" data-value="apple">
+		<span class="sg-checkbox-inp"></span>
+		<span>苹果</span>
+	</label>
+	<button class="btn btn-jv" id="submit">提交</button>
+</div> -->
+        <!-- <h2>select</h2>
+<div class="sg-select" id="select1" style="width: 200px;">
+    <div class="sg-select-inp">
+        <div class="sg-select-placeholder">请选择</div> 
+        <div class="sg-select-selected" data-value="1"></div>
+        <i class="fa fa-caret-down sg-select-arrow-down"></i>
+    	<i class="fa fa-caret-up sg-select-arrow-up"></i>
+    </div>
+    <div class="sg-select-dropdown" style="width: 200px;">
+        
+    </div>
+</div> -->
+    	<!-- <h2>cascade</h2>
+<div id="cascade1" class="sg-cascade">
+    <div class="sg-select" style="width: 200px;">
+        <div class="sg-select-inp">
+            <div class="sg-select-placeholder">请选择</div> 
+            <div class="sg-select-selected" data-value="1"></div>
+            <i class="fa fa-caret-down sg-select-arrow-down"></i>
+            <i class="fa fa-caret-up sg-select-arrow-up"></i>
+        </div>
+        <div class="sg-select-dropdown" style="display: none;">
+            
+        </div>
+    </div>
+</div>
+<button class="btn">提交</button> -->
+        <!-- <h2>datepicker</h2>
+<div style="width: 300px;">
+	<h4>选择日期</h4>
+	<input class="inp" type="text" 
+			data-beatpicker="true" 
+			data-beatpicker-module="clear"/>
+	<h4>禁用今天之前</h4>
+	<input class="inp" type="text" 
+			data-beatpicker="true" 
+			data-beatpicker-disable="disablePrevious"
+			data-beatpicker-module="clear"/>
+	<h4>禁用今天之后</h4>
+	<input class="inp" type="text" 
+			data-beatpicker="true" 
+			data-beatpicker-disable="disableNext"
+			data-beatpicker-module="clear"/>
+	<h4>时间段选择</h4>
+	<input class="inp" type="text" 
+			data-beatpicker="true" 
+			data-beatpicker-range="true"
+			data-beatpicker-module="clear"/>
+	<h4>自定义</h4>
+	<input class="inp" type="text" 
+			data-beatpicker="true" 
+			data-beatpicker-disable="disableOptions"
+			data-beatpicker-extra="customOptions" 
+			data-beatpicker-module="clear"/>
+</div>
+ -->
+        <!-- 
+<div class="jebody">
+    <blockquote class="jequote">
+        <p style="text-align: center;font-size:24px;padding-bottom: 15px;">jeDate日期控件 - (原生JS)</p>
+        jeDate6.5.0是一款原生JS开发的<span style="color: red">不依赖任何第三方库</span>大众化的日期控件，她身兼多职，虽不是万能的，但是她却是功能强大多样的美少女，她除了包含 单双面板、区域选择、 多语言、日历固定、有效无效日期、日期时间戳转换、日期加减、限制时分秒、初始化日期加减N、日期标注点、设定年月（YYYY-MM）、日期范围限制、开始日期设定、自定义日期格式、当天的前后若干天返回、时分秒选择、智能响应、自动纠错、节日识别，操作等常规功能外，根据不同的日期格式，显示不同内容，还拥有更多趋近完美的解决方案。更多的是需要你与她的亲密接触与呵护！</span> <br/> 
+        jeDate群01：516754269（已满） &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  jeDate群02：73371254<br/><br/>
+        <span style="color: red">此为部分个例展示，更多请看</span>&nbsp;&nbsp; <a href="http://www.jemui.com" style="color:#0a60d6;text-decoration:underline;">详细日期控件API</a>。<br/><br/>
+    </blockquote>
+    <div class="jewarp">
+        <h3 class="gray">常规选择</h3>
+        <div class="content">
+            <div class="jeitem">
+                <label class="jelabel">年选择</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test01" placeholder="YYYY"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">年月选择</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test02" placeholder="YYYY-MM"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">年月日选择</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test03" placeholder="YYYY-MM-DD"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">年月日时分秒选择</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test04" placeholder="YYYY-MM-DD hh:mm:ss"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">时分秒选择</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test05" placeholder="hh:mm:ss"></div>
+            </div>
+        </div>
+    </div>
+    <div class="jewarp">
+        <h3 class="gray">英文语言</h3>
+        <div class="content">
+            <div class="jeitem">
+                <label class="jelabel">年月日选择</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="enYMD" placeholder="YYYY-MM-DD"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">年月日时分秒</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="enYMDhms" placeholder="YYYY-MM-DD hh:mm:ss"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">时分秒选择</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="enhms" placeholder="hh:mm:ss"></div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="jewarp">
+        <h3 class="gray">自定义主题色</h3>
+        <div class="content">
+            <div class="jeitem">
+                <label class="jelabel">蓝色主题</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="testblue" placeholder="YYYY-MM-DD hh:mm:ss"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">绿色主题</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="testgray" placeholder="YYYY-MM-DD hh:mm:ss"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">红色主题</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="testred" placeholder="YYYY-MM-DD hh:mm:ss"></div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="jewarp">
+        <h3 class="gray">区域范围选择</h3>
+        <div class="content">
+            <div class="jeitem">
+                <label class="jelabel">年范围选择</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test06" placeholder="YYYY"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">年月范围选择</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test07" placeholder="YYYY-MM"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">日范围选择</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test08" placeholder="YYYY-MM-DD"></div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="jewarp">
+        <h3 class="gray">区域范围双面板选择</h3>
+        <div class="content">
+            <div class="jeitem">
+                <label class="jelabel">年范围选择</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test09" placeholder="YYYY"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">年月范围选择</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test10" placeholder="YYYY-MM"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">日范围选择</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test11" placeholder="YYYY-MM-DD"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">日时分秒范围选择</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test11A" placeholder="YYYY-MM-DD hh:mm:ss"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">时分秒范围选择</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test11B" placeholder="hh:mm:ss"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">时分范围选择</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test11C" placeholder="hh:mm"></div>
+            </div>
+        </div>
+    </div>
+    <div class="jewarp">
+        <h3 class="gray">自定义格式选择</h3>
+        <div class="content">
+            <div class="jeitem">
+                <label class="jelabel">自定义格式</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test12" placeholder="YYYY年MM月DD日"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">自定义格式</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test13" placeholder="MM-DD-YYYY"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">自定义格式</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test14" placeholder="DD/MM/YYYY"></div>
+            </div>
+        </div>
+    </div>
+    <div class="jewarp">
+        <h3 class="gray">一次绑定多个选择</h3>
+        <div class="content">
+            <div class="jeitem">
+                <label class="jelabel">第一个</label>
+                <div class="jeinpbox"><input type="text" class="jeinput moredate" placeholder="YYYY年MM月DD日"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">第二个</label>
+                <div class="jeinpbox"><input type="text" class="jeinput moredate" placeholder="YYYY-MM-DD"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">第三个</label>
+                <div class="jeinpbox"><input type="text" class="jeinput moredate" placeholder="YYYY/MM/DD"></div>
+            </div>
+        </div>
+    </div>
+    <div class="jewarp">
+        <h3 class="gray">DIV元素选择</h3>
+        <div class="content">
+            <div class="jeitem">
+                <label class="jelabel">第一个</label>
+                <div class="jeinpbox"><div class="jeindiv divmore" placeholder="YYYY年MM月DD日"></div></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">第二个</label>
+                <div class="jeinpbox"><div class="jeindiv divmore" placeholder="YYYY-MM-DD"></div></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">第三个</label>
+                <div class="jeinpbox"><div class="jeindiv divmore" placeholder="YYYY/MM/DD"></div></div>
+            </div>
+        </div>
+    </div>
+    <div class="jewarp">
+        <h3 class="gray">左边多类选择</h3>
+        <div class="content">
+            <div class="jeitem">
+                <label class="jelabel">单面板选择</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="short" placeholder="YYYY年MM月DD日"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">双面板选择</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="shortboth" placeholder="YYYY年MM月DD日"></div>
+            </div>
+        </div>
+    </div>
+    <div class="jewarp">
+        <h3 class="gray">YYYYMMDD格式</h3>
+        <div class="content">
+            <div class="jeitem">
+                <label class="jelabel">单面板选择</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="dateymd" placeholder="YYYYMMDD"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">双面板选择</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="dateymdboth" placeholder="YYYYMMDD"></div>
+            </div>
+        </div>
+    </div>
+    <div class="jewarp">
+        <h3 class="gray">其它功能展示选择</h3>
+        <div class="content">
+            <div class="jeitem">
+                <label class="jelabel">默认初始赋值</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test15" placeholder="YYYY-MM-DD"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">选中后的回调</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test16" placeholder="YYYY-MM-DD"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">日期切换的回调</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test17" placeholder="YYYY-MM-DD"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel" style="color:red;">双击输入框触发</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test18" placeholder="YYYY-MM-DD"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">设置自定义值</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test19" placeholder="YYYY-MM-DD"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">点击图标</label>
+                <div class="jeinpbox">
+                    <input type="text" class="jeinput" id="testico" placeholder="YYYY-MM-DD">
+                    <div class="icons jebtns" onclick="jeDate('#testico',{trigger:false,format: 'YYYY-MM-DD'})"></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="jewarp">
+        <h3 class="gray">有效、无效日期限制</h3>
+        <div class="content">
+            <div class="jeitem">
+                <label class="jelabel">有效日期正向限制</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test20" placeholder="YYYY年MM月DD日"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">无效日期正向限制</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test22" placeholder="YYYY年MM月DD日"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">指定日期正向限制</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test24" placeholder="YYYY年MM月DD日"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">有效日期反向限制</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test21" placeholder="YYYY年MM月DD日"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">无效日期反向限制</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test23" placeholder="YYYY年MM月DD日"></div>
+            </div>
+            <div class="jeitem">
+                <label class="jelabel">指定日期反向限制</label>
+                <div class="jeinpbox"><input type="text" class="jeinput" id="test25" placeholder="YYYY年MM月DD日"></div>
+            </div>
+        </div>
+    </div>
+    <div class="jewarp">
+        <h3 class="gray">直接展示日历</h3>
+        <div class="content">
+            <div class="jefixeitem" id="show01"></div>
+            <div class="jefixeitem" id="show02"></div>
+            <div class="jefixeitem" id="show03"></div>
+            <div class="jefixeitem" id="show04"></div>
+        </div>
+    </div>
+</div>
+ -->
+        <!-- <h2>upload</h2>
+<div id="file1">
+	<div class="sg-file">
+		<div class="sg-file-img">
+			<img height="100%" src="xxxHTMLLINKxxx0.88653469683960910.9534747866591253xxx" alt="">
+		</div>
+		<label for="sg-file-inp" class="sg-file-btn">
+			<span class="shu"></span>
+			<span class="heng"></span>
+		</label>
+		<input type="file" id="sg-file-inp" class="sg-file-inp">
+	</div>
+	<botton id="get-url" class="btn">获取url</botton>
+</div> -->
+        <!-- <h2>selectTile</h2>
+<div id="select1">
+	<ul class="sg-select-tile">
+
+	</ul>
+</div> -->
+        <!-- <div>
+	<h2>表单验证</h2>
+</div> -->
+        <!-- 组件用例 -->
+        <!-- <h2>Tab</h2>
+<div id="sg-tab1" class="sg-tab">
+	<ul class="sg-tab-nav">
+		<li class="active">买家</li>
+		<li>卖家</li>
+	</ul>
+	<div class="sg-tab-con">
+		<div class="sg-tab-item" style="display: block;">买家内容111111</div>
+		<div class="sg-tab-item">卖家内容222222</div>
+	</div>
+</div>
+ -->
+        <!-- <style>
+    /*指定宽高*/
+    #banner1, #banner1 .sg-banner-item{
+        width: 400px;
+        height: 250px;
+    }
+</style>
+<h2>slider</h2>
+<div id="banner1">
+    <div class="sg-banner">
+        <!-- 放图片的盒子 -->
+        <div class="sg-banner-con">
+            <div class="sg-banner-item">
+                <div class="sg-banner-img1"></div>
+            </div>
+            <div class="sg-banner-item">
+                <div class="sg-banner-img2"></div>
+            </div>
+            <div class="sg-banner-item">
+                <div class="sg-banner-img3"></div>
+            </div>
+        </div>
+        <!-- 放小圆点的盒子 -->
+        <ul class="sg-banner-dots">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <!-- 放按钮的盒子 -->
+        <div class="sg-banner-btn">
+            <div class="sg-banner-left"></div>
+            <div class="sg-banner-right"></div>
+        </div>
+    </div>
+</div> -->
+        <!-- <h2>cascade</h2>
+
+<button id="replaceImg" class="l-btn">更换图片</button>
+<div style="width: 320px;height: 320px;border: solid 1px #555;padding: 5px;margin-top: 10px">
+    <img id="finalImg" src="xxxHTMLLINKxxx0.87301800702978080.7389114856237933xxx" width="100%">
+</div>
+
+<!--图片裁剪框 start-->
+<div style="display: none" class="tailoring-container">
+    <div class="black-cloth" onclick="closeTailor(this)"></div>
+    <div class="tailoring-content">
+        <div class="tailoring-content-one">
+            <label title="上传图片" for="chooseImg" class="l-btn choose-btn">
+                <input type="file" accept="image/jpg,image/jpeg,image/png" name="file" id="chooseImg" class="hidden" onchange="selectImg(this)">
+                选择图片
+            </label>
+            <div class="close-tailoring"  onclick="closeTailor(this)">×</div>
+        </div>
+        <div class="tailoring-content-two">
+            <div class="tailoring-box-parcel">
+                <img id="tailoringImg">
+            </div>
+            <div class="preview-box-parcel">
+                <p>图片预览：</p>
+                <div class="square previewImg"></div>
+                <div class="circular previewImg"></div>
+            </div>
+        </div>
+        <div class="tailoring-content-three">
+            <button class="l-btn cropper-reset-btn">复位</button>
+            <button class="l-btn cropper-rotate-btn">旋转</button>
+            <button class="l-btn cropper-scaleX-btn">换向</button>
+            <button class="l-btn sureCut" id="sureCut">确定</button>
+        </div>
+    </div>
+</div>
+<!--图片裁剪框 end-->
+ -->
+        <!-- <div id="myChart1" style="width: 400px; height: 400px"></div> -->
+        <!-- <div id="myChart2" style="width: 400px; height: 400px"></div> -->
+    </div>
+</section>
+	<!-- 通用尾部 -->
+	<footer id="footer" class="footer">
+		<div class="w">
+			<div class="flt links">
+		        <a href="/index/license.html" class="color-gray">隐私保护申明</a>|
+		        <a href="/index/jobs.html" class="color-gray">招贤纳士</a>|
+		        <a href="/index/about-us.html" class="color-gray">关于我们</a>|
+		        <a href="/index/contact.html" class="color-gray">联系我们</a>
+		    </div>
+		    <div class="frt copyright">
+		        ©&nbsp;2017&nbsp;&nbsp;湖北及时石化科技有限公司&nbsp;鄂ICP备17022117号
+		    </div>
+	    </div>
+	    <div id="scroll"></div>
+	</footer>
+
+	<!-- 全局提示 -->
+	<div id="sg-msg" class="sg-msg" >
+		<div class="sg-msg-con">
+			<i class="sg-msg-icon"></i>
+			<span class="sg-msg-text"></span>
+		</div>
+	</div>
+	<!-- 模态框 -->
+	<div id="sg-modal" class="sg-modal">
+		<div id="sg-modal-con" class="sg-modal-con">
+			<div class="sg-modal-head">
+				<div id="sg-modal-title" class="sg-modal-title">
+					<i></i>
+					<span></span>
+				</div>
+				<div id="sg-modal-close" class="sg-modal-close">
+					<i></i>
+				</div>
+			</div>
+			<div id="sg-modal-body" class="sg-modal-body"></div>
+			<div class="sg-modal-foot">
+				<button id="sg-modal-cancel" class="btn btn-bd"></button>
+				<button id="sg-modal-confirm" class="btn btn-hu"></button>
+			</div>
+		</div>
+	</div>
+	<!-- 图片预览 -->
+	<div id="sg-modal-photo" class="sg-modal-photo">
+		<div id="sg-modal-photo-con" class="sg-modal-photo-con">
+			<div class="sg-modal-photo-head">
+				<div id="sg-modal-photo-title" class="sg-modal-photo-title"></div>
+				<div id="sg-modal-photo-close" class="sg-modal-photo-close">
+					<i></i>
+				</div>
+			</div>
+			<div id="sg-modal-photo-body" class="sg-modal-photo-body">
+				<!-- <img width="100%" src="" alt=""> -->
+				<div class="text"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 引入外部文件 -->
+	<script>
+		document.write('<script src="/js/jquery-1.10.2.min.js?'+new Date().getTime()+'"></scr'+'ipt>');
+	</script>
+	<script src="/js/placeholder.js"></script>
+<script type="text/javascript" src="/js/app.js?24930c8208525302c7d3"></script><script type="text/javascript" src="/js/demo.js?24930c8208525302c7d3"></script></body>
+</html>
