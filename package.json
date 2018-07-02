@@ -1,7 +1,7 @@
 {
-  "name": "sg-jquery-webpack",
+  "name": "sg-jquery-vui",
   "version": "1.0.0",
-  "description": "jquery-webpack项目搭建",
+  "description": "一个基于jquery开发的UI框架jquery-vui",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config build/webpack.dev.config.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shiguang0116/sg-jquery-webpack.git"
+    "url": "https://github.com/shiguang0116/sg-jquery-vui.git"
   },
   "author": "shig",
   "license": "ISC",
